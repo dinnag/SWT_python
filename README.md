@@ -1,1 +1,1 @@
-# SWT_python
+# SWT_python - Repository for Python Training
