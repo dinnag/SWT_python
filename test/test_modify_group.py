@@ -14,5 +14,5 @@ def test_modify_first_group_name(app):
 
 def test_modify_first_group_header(app):
     if app.group.count() == 0:
-        app.group.create(Group(name="Test"))
+        app.group.create(Group(name="Test", header="Header"))
     app.group.modify_first_group(Group(header="New_header"))
