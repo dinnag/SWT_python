@@ -5,7 +5,7 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-    def create_contact(self, contact):
+    def create(self, contact):
         wd = self.app.wd
         wd.find_element_by_link_text("add new").click()
         self.fill_contact_form(contact)
@@ -68,3 +68,8 @@ class ContactHelper:
         self.fill_contact_form(contact)
         # submit group modification
         wd.find_element_by_name("update").click()
+
+    def count(self):
+        wd = self.app.wd
+        self.app.navigation.return_to_homepage()
+        return len(wd.find_elements_by_name("selected[]"))
