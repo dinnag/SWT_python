@@ -7,6 +7,6 @@ class NavigationHelper:
         wd = self.app.wd
         wd.get("http://localhost/addressbook/")
 
-    def go_to_homepage(self):
+    def return_to_homepage(self):
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
